@@ -16,7 +16,7 @@ export const sequelize = new Sequelize(
 export const testConnection = async (): Promise <void> => {
     try{
         await sequelize.authenticate();
-        console.log("Conexion a la base de datos establecida correctamente.");    
+        console.log(`Conexion a la base de datos establecida correctamente en el puerto: ${env.db.port}.`);    
     } catch (error){
         console.log("No se pudo conectat a la base de datos:", error);
     }
